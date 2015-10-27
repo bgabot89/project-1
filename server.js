@@ -8,7 +8,7 @@ var express = require("express"),
 		mongoose = require('mongoose');
 
 //uses the User Model and pulls it from the database
-//var User = require('./models/user');
+var User = require('./models/user');
 
 //middleware to allow use of ejs
 app.set("view engine", "ejs");
