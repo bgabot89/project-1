@@ -2,11 +2,6 @@
 var mongoose = require ("mongoose");
 		Schema = mongoose.Schema; 
 
-
-mongoose.connect( process.env.MONGOLAB_URI ||
-                      process.env.MONGOHQ_URL || 
-                      "localhost:3000" 
-
 //defines user Schema
 var userSchema = new Schema({
 	user: String,

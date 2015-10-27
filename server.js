@@ -19,8 +19,9 @@ app.use("/static", express.static("./public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 //mongod connect to another terminal
-mongoose.connect('mongodb://localhost/login_signup');
-
+mongoose.connect( process.env.MONGOLAB_URI ||
+                      process.env.MONGOHQ_URL || 
+                      'mongodb://localhost/login_signup')
 
 
 
@@ -70,7 +71,6 @@ console.log(req.body);
 //JSON GET REQUEST FROM TRAITIFY 
 
 //connects server to heroku
-app.listen(process.env.PORT || 3000);
-/*app.listen(3000, function (){
+app.listen(process.env.PORT  || 3000, function (){
   console.log("listening on port 3000");
-});*/
+});
