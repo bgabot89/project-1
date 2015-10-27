@@ -1,0 +1,83 @@
+<html>
+
+<head>
+ <!--Bootstrap JS from Bootstrap enables dropdown -->
+
+
+  <!-- Bootstrap CSS from CDN works okay-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/ex.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!--Makes text draggable -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/static/js/scripts.js"></script>
+
+</head>
+<body>
+
+<!--navbar goes here -->
+
+<!-- Adds a navigation bar -->
+<div class="container-fluid">
+
+    
+    <!-- Second navbar for profile settings -->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">Site Placeholder</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-4">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/home">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/login">Log In</a></li>
+            <!--This will show the name of the user when they login -->
+            <li><a href="">Profile</a></li>
+
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+</div><!-- /.container-fluid -->
+
+
+<!--Login Form goes here -->
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>SignUp</h1>
+        <hr>
+        <form id="signup-form">
+          <div class="form-group">
+            <input type="text" name="email" class="form-control" placeholder="Email" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" class="form-control" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="submit" value="SignUp" class="btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

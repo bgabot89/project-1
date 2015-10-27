@@ -1,0 +1,50 @@
+h1 {
+		font-size:15px;
+}
+
+.jumbotron {
+	font-size:70px;
+	border: solid black 5px;
+
+}
+	.container {
+		padding:10px;
+		margin: 0 auto;
+	}
+.jumbotron {
+	background: #000 url("http://www.onecreativecouple.com/wp-content/uploads/2012/12/sw-wall.jpg") center center;
+	font-family:Herculanum;
+	position: relative;
+    color:white;
+    background-size: cover;
+    overflow: hidden;
+    opacity:75%;
+
+  }
+
+  .banner1 {
+  	height:200px;
+  	width:275px;
+  }
+
+  .banner1:hover{
+ 	transform:scale(1.3,1.3);
+ 	cursor: pointer;
+
+  }
+
+  .assessment {
+  	font-size:20px;
+  }
+
+  .personality-blend {
+  	display:none;
+  }
+  .personality-types {
+  	background-color: green;
+  }	
+
+  p{
+  	font-size:15px;
+
+  }

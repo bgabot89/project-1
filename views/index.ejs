@@ -1,0 +1,137 @@
+
+<html>​
+ <head>​
+ <!--Bootstrap JS from Bootstrap enables dropdown -->
+
+
+  <!-- Bootstrap CSS from CDN works okay-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/ex.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!--Makes text draggable -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="home.js"></script>
+
+    <title>RPG Class Test</title> 
+
+
+
+
+
+<!-- Adds a navigation bar -->
+<div class="container-fluid">
+
+    
+    <!-- Second navbar for profile settings -->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">Site Placeholder</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-4">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/login">Log In</a></li>
+
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+</div><!-- /.container-fluid -->
+
+
+
+
+    <div class = "jumbotron">
+    <div class="container">
+
+
+    <header class = "text-center">What is your RPG CLASS?</header>
+</div>
+</div>
+ 
+  <!-- import jquery -->
+    <script src="https://cdn.traitify.com/js/widgets/v1.js"></script>​ 
+  </head>​
+  <body>​
+<header> 
+<h1>Website app </h1>
+</header>
+
+    <div class="assessment"></div>​
+
+
+
+    <button id="reset" onclick="reset()">Reset</button>
+
+    <script>
+      Traitify.setPublicKey("7buclv4pit5ejougdffneq22qm"); //public key 
+      Traitify.setHost("https://api-sandbox.traitify.com"); 
+      Traitify.setVersion("v1");
+      var assessmentId = '5290c619-29b6-4031-83dd-8025a1b83ab2';
+  Traitify.ui.load(assessmentId, ".assessment");
+       
+
+  var reset = function(){
+        traitify = Traitify.ui.load(assessmentId, ".assessment",{slideDeck: {showResults: false}});
+        traitify.slideDeck.onFinished(function(){
+            alert("Finished");
+            assessmentId = assessmentId++;
+            Traitify.ui.load(assessmentId, ".assessment");
+          
+        });
+};
+
+
+  // trigger an event on initialize
+    // traitify.onInitialize(function(){
+    //     console.log(traitify.data.get("Slides"));
+    //     console.log("Initialized");
+    // });
+
+
+// this is what you really want:
+    // slideDeck = Traitify.ui.widgets.slideDeck(assessmentId, currentTarget, options)
+    // slideDeck.data.add("Slides", [{caption:"Your Caption", image_desktop:"Your Image", id: "Your UUID"})
+    // slideDeck.actions.add("processSlide", function(data){alert("You Clicked " + data.caption)})
+    // slideDeck.run()
+
+
+
+
+
+
+// custom script
+// $(document).ready(){
+//   $('.tf-results').hide();
+// }
+   </script>  
+
+
+  </body>​
+​</html>
+
+
+
+
+
+
+
