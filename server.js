@@ -3,6 +3,7 @@ var express = require("express"),
     app = express(),
     ejs = require("ejs"),
  		bodyParser = require('body-parser'),
+ 		session = require('express-session');
 
 //mongoose ejs
 		mongoose = require('mongoose');
@@ -18,10 +19,19 @@ app.use("/static", express.static("./public"));
 //allows use of bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
 
+//allows use of sessions
+app.use(session({
+	saveUninitialized:true,
+	resave: true,
+	secret:'secretpass',
+	cookie: { secure:true }
+}));
+
+
 //mongod connect to another terminal
 mongoose.connect( process.env.MONGOLAB_URI ||
                       process.env.MONGOHQ_URL || 
-                      'mongodb://localhost/login_signup')
+                      'mongodb://localhost/login_signup');
 
 
 
@@ -62,10 +72,44 @@ app.get('/users', function (req,res){
 	res.json(Users);
 });
 });
-//route to show all users that have signed up
+
+
+//creates a new user with password
 app.post('/users', function (req,res){
 console.log(req.body);
+	User.createSecure(req.body.email, req.body.password, function (err,Newuser){
+		req.session.userId = Newuser._id;
+		res.json(Newuser);
+	});
+});
 
+//authenticate the user and creates a new session
+app.post('/sessions', function (req,res){
+	User.authenticate(req.body.email, req.body.password, function (err, checkCorrectUser){
+		if (err){
+      console.log('authentication error: ', err);
+      res.status(500).send();
+	} else {
+		console.log('setting session id', checkCorrectUser);
+		req.session.userId = loggedInUser._id;
+		res.redirect('/profile');
+		}
+	});
+});
+
+//show user profile page 
+app.get('/profile', function (req,res){
+	console.log('session user id: ', req.session.userId);
+	User.findOne({_id: req.session.userId}), function (err,currentUser){
+		if (err){
+			console.log('error found');
+			res.redirect('/login');
+		} else {
+			//render user profile page
+			console.log('loading profile page');
+			res.render('showUser');
+		}
+};
 });
 
 //JSON GET REQUEST FROM TRAITIFY 
