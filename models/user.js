@@ -1,7 +1,8 @@
 //activates mongoose
 var mongoose = require ("mongoose");
 		Schema = mongoose.Schema; 
-
+//activates bcrypt
+var bcrypt = require('bcrypt');
 //defines user Schema
 var userSchema = new Schema({
 	user: String,

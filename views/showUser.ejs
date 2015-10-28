@@ -1,1 +1,30 @@
-<p> Directed to user page </p> 
+<html>
+
+<head>
+ <!--Bootstrap JS from Bootstrap enables dropdown -->
+
+
+  <!-- Bootstrap CSS from CDN works okay-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/ex.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!--Makes text draggable -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/static/js/scripts.js"></script>
+
+</head>
+<body>
+
+
+<title> Logged in as </title>
+<h2>Welcome!
+            <% if (user && user.email) { %>
+              You're logged in as <%= user.email %>!</h2>
+             <% } %>
+</body>
+</html>

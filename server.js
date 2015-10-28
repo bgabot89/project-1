@@ -8,7 +8,7 @@ var express = require("express"),
 //mongoose ejs
 		mongoose = require('mongoose');
 
-//uses the User Model and pulls it from the database
+//requires the User Model for use in server.js file
 var User = require('./models/user');
 
 //middleware to allow use of ejs
@@ -45,16 +45,7 @@ app.get('/home', function (req,res){
 	res.render('home');
 });
 
-//routes from login page to window showing online credentials
-app.get('/login', function (req,res){
-	res.render('login');
-});
 
-
-//routes from login page to window showing online credentials
-app.get('/signup', function (req,res){
-	res.render('signup');
-});
 
 //routes from image on home page to rpg persona
 app.get('/rpg', function (req,res){
@@ -66,6 +57,30 @@ app.get('/about', function (req,res){
 	res.render('about');
 });
 
+//routes from login page to window showing online credentials
+app.get('/signup', function (req,res){
+	res.render('signup');
+});
+
+//routes to shown users
+app.get('/profilepage', function (req,res){
+	res.render('showuser');
+});
+
+
+//new user route -- creates a new user with password
+app.post('/users', function (req,res){
+//console.log(req.body);
+	User.createSecure(req.body.email, req.body.password, function (err,Newuser){
+		//req.session.userId = Newuser._id;
+		res.json(Newuser);
+
+
+});
+});
+
+
+
 //when the user inputs data from the sign up form, it'll be added to the json
 app.get('/users', function (req,res){
 	User.find({}, function (err,Users){
@@ -74,16 +89,17 @@ app.get('/users', function (req,res){
 });
 
 
-//creates a new user with password
-app.post('/users', function (req,res){
-console.log(req.body);
-	User.createSecure(req.body.email, req.body.password, function (err,Newuser){
-		req.session.userId = Newuser._id;
-		res.json(Newuser);
-	});
+
+//routes from login page to window showing online credentials
+app.get('/login', function (req,res){
+	res.render('login');
 });
 
-//authenticate the user and creates a new session
+
+
+
+
+//route that authenticates the user and creates a new session
 app.post('/sessions', function (req,res){
 	User.authenticate(req.body.email, req.body.password, function (err, checkCorrectUser){
 		if (err){
@@ -97,7 +113,8 @@ app.post('/sessions', function (req,res){
 	});
 });
 
-//show user profile page 
+
+//shows the user profile page
 app.get('/profile', function (req,res){
 	console.log('session user id: ', req.session.userId);
 	User.findOne({_id: req.session.userId}), function (err,currentUser){
@@ -111,6 +128,7 @@ app.get('/profile', function (req,res){
 		}
 };
 });
+
 
 //JSON GET REQUEST FROM TRAITIFY 
 

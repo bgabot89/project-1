@@ -29,14 +29,26 @@ $(document).ready(function(){
 	}
 }
 
+/*selects one description
+var textTemp = $("div.description").text();
+*/
 
-//declares a new function that will change the description 
+//selects entire description and replaces it with something else
 function descriptionType(){
-	console.log('yes, its linked');
+	
+$(".description").text(function () {
+	console.log(".description");
+    return $(this).text().replace("Noble", "Knight"); 
+});
 }
+descriptionType();
+
+
+
 
 
 // classType();
-setTimeout(classType, 500)
+setTimeout(classType, 500);
+setTimeout(descriptionType, 500);
 });
 
