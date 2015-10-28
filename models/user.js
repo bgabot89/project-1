@@ -9,7 +9,7 @@ var mongoose = require ("mongoose");
 
 //defines user Schema
 var userSchema = new Schema({
-	user: String,
+	email: String,
 	passwordDigest: String
 });
 
@@ -47,7 +47,7 @@ userSchema.statics.authenticate = function (email, password, callback) {
 };
 
 //authenticate password 
-userSchema.statics.checkPassword = function(password){
+userSchema.methods.checkPassword = function(password){
 	return bcrypt.compareSync(password, this.passwordDigest);
 };
 

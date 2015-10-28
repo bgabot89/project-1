@@ -101,18 +101,26 @@ app.get('/login', function (req,res){
 
 //route that authenticates the user and creates a new session
 app.post('/sessions', function (req,res){
-	User.authenticate(req.body.email, req.body.password, function (err, checkCorrectUser){
+	User.authenticate(req.body.email, req.body.password, function (err, loggedInUser){
 		if (err){
       console.log('authentication error: ', err);
       res.status(500).send("error, can't find user");
 	} else {
-		console.log('setting session id', checkCorrectUser);
+		console.log('setting session id', loggedInUser);
 		req.session.userId = loggedInUser._id;
 		res.redirect('/home');
 		}
 	});
 });
 
+
+//route that sends user to logout
+app.get('/logout', function (req,res){
+	//removes session id
+	req.session.userId = null;
+
+	res.redirect('/home');
+});
 
 /*
 //shows the user profile page

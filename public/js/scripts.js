@@ -25,12 +25,12 @@ $.post('/users', signupData, function(response){
 
 //event listener for login form
 $("#login-form").on("submit", function(e){
-	e.preventDefault();
+	//e.preventDefault();
 	var loginData = $("#login-form").serialize();
 console.log(loginData);
 //sends a request to sessions with the users data
-$.post('/sessions', loginData, function(response){
+//$.post('/sessions', loginData, {async: true}, function(response){
 	console.log(response);
 });
-});
+//});
 });
