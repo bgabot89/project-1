@@ -1,8 +1,12 @@
 //activates mongoose
 var mongoose = require ("mongoose");
 		Schema = mongoose.Schema; 
-//activates bcrypt
-var bcrypt = require('bcrypt');
+		//activates bcrypt
+		bcrypt = require('bcrypt');
+		//hashes password
+		salt = bcrypt.genSaltSync(10);
+		hash = bcrypt.hashSync('B4c0/\/', salt);
+
 //defines user Schema
 var userSchema = new Schema({
 	user: String,

@@ -83,7 +83,7 @@ app.post('/users', function (req,res){
 
 //when the user inputs data from the sign up form, it'll be added to the json
 app.get('/users', function (req,res){
-	User.find({}, function (err,Users){
+	User.find({}, function(err,Users){
 	res.json(Users);
 });
 });
@@ -104,16 +104,17 @@ app.post('/sessions', function (req,res){
 	User.authenticate(req.body.email, req.body.password, function (err, checkCorrectUser){
 		if (err){
       console.log('authentication error: ', err);
-      res.status(500).send();
+      res.status(500).send("error, can't find user");
 	} else {
 		console.log('setting session id', checkCorrectUser);
 		req.session.userId = loggedInUser._id;
-		res.redirect('/profile');
+		res.redirect('/home');
 		}
 	});
 });
 
 
+/*
 //shows the user profile page
 app.get('/profile', function (req,res){
 	console.log('session user id: ', req.session.userId);
@@ -128,6 +129,7 @@ app.get('/profile', function (req,res){
 		}
 };
 });
+*/
 
 
 //JSON GET REQUEST FROM TRAITIFY 
