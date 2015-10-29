@@ -6,7 +6,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		var entryData = $("#entry-form").serialize();
 		console.log(entryData);
-		$.post('/users', entryData, function(response){
+		$.post('/heros', entryData, function(response){
 			//$('.not-logged-in').hide();
 				console.log(response);
 		});

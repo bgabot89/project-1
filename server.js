@@ -20,7 +20,7 @@ app.use("/static", express.static("./public"));
 //allows use of bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
 
-//allows use of sessions
+//allows use of sessions + cookies
 app.use(session({
 	saveUninitialized:true,
 	resave: false,
@@ -34,12 +34,38 @@ mongoose.connect( process.env.MONGOLAB_URI ||
                       process.env.MONGOHQ_URL || 
                       'mongodb://localhost/login_signup');
 
+//Data api for list of qualities
 
+var qualities = [
+{id:0, name: "Insert qualities here!"}
+];
 
 //route to index file
 app.get('/', function (req,res){
 	res.render('index');
 });
+
+//route to get all data from the array list and sends it to the json
+app.get("/api/qualities", function (req,res){
+	//sends data as json
+	res.json(qualities);
+});
+
+//api route to create a new entry to the api list
+app.post("/api/qualities", function (req,res){
+var newQuality = req.body;
+//adds a unique id;
+if (list.length !== 0){
+	newQuality.id = list[list.length-1].id+1; 
+}
+	else {
+		newQuality.id=0;
+	}
+	//pushes unique id into json
+	qualities.push(qualities);
+	res.json(qualities);
+});
+
 
 //route to get to the home ejs file from the taskbar
 app.get('/home', function (req,res){
@@ -63,6 +89,11 @@ app.get('/about', function (req,res){
 //routes from login page to window showing online credentials
 app.get('/signup', function (req,res){
 	res.render('signup');
+});
+
+//routes to qualities app
+app.get('/qualities', function (req,res){
+	res.render('qualities', {qualities: qualities});
 });
 
 //routes to shown users
@@ -96,6 +127,16 @@ app.get('/users', function (req,res){
 });
 });
 
+//new user route -- creates a new user with password
+app.post('/heros', function (req,res){
+//console.log(req.body);
+	Hero.createSecure(req.body.Input, function (err,hero){
+		console.log(req.body.Input);
+		res.json(hero);
+
+
+});
+});
 
 //when the user inputs data from the hero form, it'll be added to a json
 app.get('/heros', function (req,res){
