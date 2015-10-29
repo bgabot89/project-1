@@ -12,13 +12,13 @@ h1 {
 		margin: 0 auto;
 	}
 .jumbotron {
-	background: #000 url("http://www.onecreativecouple.com/wp-content/uploads/2012/12/sw-wall.jpg") center center;
+	background: #000 url("http://i882.photobucket.com/albums/ac23/bgabot89/map1_zpsfsy2z7mt.png") center center;
 	font-family:Herculanum;
 	position: relative;
     color:white;
     background-size: cover;
     overflow: hidden;
-    opacity:75%;
+    opacity:55%;
 
   }
 
@@ -50,7 +50,18 @@ h1 {
     display:none;
   }
 
+  .description{
+    display:none;
+  }
+
+  li {
+    font-family:Herculanum;
+  }
+
   p{
   	font-size:15px;
 
+  }
+  .wrapper {
+    text-align:center;
   }

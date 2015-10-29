@@ -77,10 +77,10 @@
 
     <div class="assessment"></div>​
 
-
-
-    <button id="reset" onclick="reset()">Reset</button>
-
+    
+      <div class="wrapper">
+    <button id="reset" onclick='/home'>Curious about your class description? Click Here!</button>
+      </div>
     <script>
       Traitify.setPublicKey("1m5gjkmunfftvlid4v4d12nn50"); //public key 
       Traitify.setHost("https://api-sandbox.traitify.com"); 
@@ -92,6 +92,7 @@
   Traitify.ui.load(assessmentId, ".assessment");
        
 
+/*
   var reset = function(){
         traitify = Traitify.ui.load(assessmentId, ".assessment",{slideDeck: {showResults: false}});
         traitify.slideDeck.onFinished(function(){
@@ -101,6 +102,7 @@
           
         });
 };
+*/
 
 
   // trigger an event on initialize

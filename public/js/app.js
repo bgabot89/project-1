@@ -48,7 +48,6 @@ descriptionType();
 
 
 // classType();
-setTimeout(classType, 500);
-setTimeout(descriptionType, 500);
+setTimeout(classType, 1000);
 });
 

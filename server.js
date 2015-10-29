@@ -10,6 +10,7 @@ var express = require("express"),
 
 //requires the User Model for use in server.js file
 var User = require('./models/user');
+var Hero = require('./models/hero');
 
 //middleware to allow use of ejs
 app.set("view engine", "ejs");
@@ -22,9 +23,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 //allows use of sessions
 app.use(session({
 	saveUninitialized:true,
-	resave: true,
+	resave: false,
 	secret:'secretpass',
-	cookie: { secure:true }
+	cookie: { maxAge: 180000 } // 3 minutes
 }));
 
 
@@ -42,7 +43,9 @@ app.get('/', function (req,res){
 
 //route to get to the home ejs file from the taskbar
 app.get('/home', function (req,res){
-	res.render('home');
+	var email = req.session.email;
+	// console.log(req.session, 'HOME req.session');
+	res.render('home', {email: email});
 });
 
 
@@ -67,6 +70,11 @@ app.get('/profilepage', function (req,res){
 	res.render('showuser');
 });
 
+//route shown to hero page
+app.get('/hero', function (req,res){
+	res.render('hero');
+});
+
 
 //new user route -- creates a new user with password
 app.post('/users', function (req,res){
@@ -89,9 +97,17 @@ app.get('/users', function (req,res){
 });
 
 
+//when the user inputs data from the hero form, it'll be added to a json
+app.get('/heros', function (req,res){
+	Hero.find({}, function(err,Heros){
+	res.json(Heros);
+});
+});
+
 
 //routes from login page to window showing online credentials
 app.get('/login', function (req,res){
+	// console.log(req.session.userId);
 	res.render('login');
 });
 
@@ -103,22 +119,34 @@ app.get('/login', function (req,res){
 app.post('/sessions', function (req,res){
 	User.authenticate(req.body.email, req.body.password, function (err, loggedInUser){
 		if (err){
-      console.log('authentication error: ', err);
+      // console.log('authentication error: ', err);
       res.status(500).send("error, can't find user");
 	} else {
-		console.log('setting session id', loggedInUser);
+		// console.log('setting session id', loggedInUser);
+		// console.log(req.session, 'before');
 		req.session.userId = loggedInUser._id;
-		res.redirect('/home');
+		req.session.email = loggedInUser.email;
+		
+		req.session.save(function(err){
+			// console.log(req.session, 'after');
+			console.log('Logged in. req.session.userId = ', req.session.userId);
+			res.redirect('/home');
+
+		});
+		
 		}
 	});
 });
 
 
 //route that sends user to logout
-app.get('/logout', function (req,res){
+app.post('/logout', function (req,res){
 	//removes session id
 	req.session.userId = null;
-
+	req.session.user = null;
+	req.session.email = null;
+	console.log('Logged out. req.session.userId = ', req.session.userId);
+	console.log('req.session.email = ', req.session.email);
 	res.redirect('/home');
 });
 
