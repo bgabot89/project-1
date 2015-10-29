@@ -46,6 +46,10 @@ h1 {
   	background-color: green;
   }	
 
+  .logged-in{
+    display:none;
+  }
+
   p{
   	font-size:15px;
 

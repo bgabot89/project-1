@@ -71,9 +71,9 @@ app.get('/profilepage', function (req,res){
 //new user route -- creates a new user with password
 app.post('/users', function (req,res){
 //console.log(req.body);
-	User.createSecure(req.body.email, req.body.password, function (err,Newuser){
-		//req.session.userId = Newuser._id;
-		res.json(Newuser);
+	User.createSecure(req.body.email, req.body.password, function (err,user){
+		req.session.userId = user._id;
+		res.json(user);
 
 
 });
