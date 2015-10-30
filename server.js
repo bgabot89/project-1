@@ -11,6 +11,7 @@ var express = require("express"),
 //requires the User Model for use in server.js file
 var User = require('./models/user');
 var Hero = require('./models/hero');
+var Quality = require('./models/quality');
 
 //middleware to allow use of ejs
 app.set("view engine", "ejs");
@@ -37,7 +38,7 @@ mongoose.connect( process.env.MONGOLAB_URI ||
 //Data api for list of qualities
 
 var qualities = [
-{id:0, name: "Insert qualities here!"}
+{id:0, name: "Insert quality here"}
 ];
 
 //route to index file
@@ -55,14 +56,14 @@ app.get("/api/qualities", function (req,res){
 app.post("/api/qualities", function (req,res){
 var newQuality = req.body;
 //adds a unique id;
-if (list.length !== 0){
-	newQuality.id = list[list.length-1].id+1; 
+if (qualities.length !== 0){
+	newQuality.id = qualities[qualities.length-1].id+1; 
 }
 	else {
 		newQuality.id=0;
 	}
 	//pushes unique id into json
-	qualities.push(qualities);
+	//qualities.push(qualities);
 	res.json(qualities);
 });
 
@@ -75,35 +76,37 @@ app.get('/home', function (req,res){
 	res.render('home', {hero: hero, email:email});
 });
 
-//route to get to the home ejs file from the taskbar
-app.get('/home', function (req,res){
-	var email = req.session.email;
-	//var hero = req.session.hero;
-	// console.log(req.session, 'HOME req.session');
-	res.render('home', {email: email});
-});
-
-
 
 
 //routes from image on home page to rpg persona
 app.get('/rpg', function (req,res){
-	res.render('index');
+	var email = req.session.email;
+	res.render('index',{email: email});
 });
 
 //routes to about page 
 app.get('/about', function (req,res){
-	res.render('about');
+	var email = req.session.email;
+	res.render('about',{email: email});
 });
 
 //routes from login page to window showing online credentials
 app.get('/signup', function (req,res){
-	res.render('signup');
+	var email = req.session.email;
+	res.render('signup',{email: email});
 });
+
+//routes from login page to window showing online credentials
+app.get('/contact', function (req,res){
+	var email = req.session.email;
+	res.render('contact',{email: email});
+});
+
 
 //routes to qualities app
 app.get('/qualities', function (req,res){
-	res.render('qualities', {qualities: qualities});
+	var email = req.session.email;
+	res.render('qualities', {qualities: qualities, email:email});
 });
 
 //routes to shown users
@@ -113,7 +116,8 @@ app.get('/profilepage', function (req,res){
 
 //route shown to hero page
 app.get('/hero', function (req,res){
-	res.render('hero');
+	var email = req.session.email;
+	res.render('hero',{email: email});
 });
 
 
@@ -161,7 +165,8 @@ app.get('/heros', function (req,res){
 //routes from login page to window showing online credentials
 app.get('/login', function (req,res){
 	// console.log(req.session.userId);
-	res.render('login');
+	var email = req.session.email;
+	res.render('login', {email: email});
 });
 
 

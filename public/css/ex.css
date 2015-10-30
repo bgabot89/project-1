@@ -2,9 +2,85 @@ h1 {
 		font-size:15px;
 }
 
+
+.navbar-brand{
+  font-family: Knights Quest;
+  font-size:40px;
+}
 .jumbotron {
 	font-size:70px;
 	border: solid black 5px;
+   text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
+}
+
+body {
+  background: url("http://www.es-pully.ch/photo/images/10GOCOM/Georgios/images/I5.jpg");
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+p{
+  font-size:40px;
+  font-family:Herculanum;  
+  color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
+
+
+}
+
+ol {
+   font-size:14px;
+  font-family:Herculanum;  
+  color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+}
+p1 {
+  font-size:30px;
+  font-family:Herculanum;  
+  color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
+}
+
+p2 {
+  font-size:14px;
+  font-family:Herculanum;  
+  color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+
+}
+
+h1{
+   font-size:14px;
+  font-family:Herculanum;  
+  color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
 
 }
 	.container {
@@ -51,7 +127,7 @@ h1 {
   }
 
   .description{
-    display:none;
+    color:white;
   }
 
   li {

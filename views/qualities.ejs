@@ -21,8 +21,6 @@
 
 
 
-
-
 	<!-- Adds a navigation bar -->
 	<div class="container-fluid">
 
@@ -38,7 +36,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="/home">Site Placeholder</a>
+	          <a class="navbar-brand" href="/home">IW-RPG</a>
 	        </div>
 	    
 	        <!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,7 +45,8 @@
 	            <li><a href="/home">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="#">Works</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href=""><%= email %> </a></li>
             <li><a href="/hero">Hero Name</a></li>
             	<li class = "not-logged-in"><a href="/signup">Sign Up</a></li>
             	<li class = "not-logged-in"><a href="/login">Log In</a></li>
@@ -59,22 +58,39 @@
 	    </nav><!-- /.navbar -->
 	</div><!-- /.container-fluid -->
 
+	<div class = "jumbotron">
+    <div class="container">
 
+
+    <header class = "text-center">Avatar Creation</header>
+</div>
+</div>
+
+<!--paragraph description -->
+<p> How it works: </p>
+<ol>
+<li> List a few qualities below, i.e... long hair, female etc... </li>
+<li> Once you've finished listing your qualities, click on submit </li>
+<li> Afterwards, we'll send your request to an artist, and they'll create a personal profile picture of the character with the qualities you've listed! </li>
+<li> If you like the avatar picture, make it into your avatar picture!</li>
+</ol>
 
  <!-- When the user wants to submit their blog post on the site they will click on the site -->
         <form class="form-inline" id="new-list-form">
             <input type="text" name="name" id="searchinput" class="form-control" placeholder = "What Qualities would you like?" >           
         <button type="submit" class="btn btn-primary" id="submitButton">Post It!</button>
+
         </form>
 
+        <button type="submit" class="btn btn-primary" id="submitForm">Submit</button>
+
   <!-- adds list from database to ejs -->
-      <ul class="list-group" id="list-ul">
-    <% for (var i=0; i<qualities.length; i++) { %>
-      <li class="list-group-item">
-        <h4 class="list-group-item-heading"><%= qualities[i].name %></h4>
-          <button data-id="<%=qualities[i].id %>" type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-      </li>
-    <% } %>
+    <ul class="list-group" id="list-ul">
+    	<% for (var i=0; i<qualities.length; i++) { %>
+      	<li class="list-group-item">
+        	<h4 class="list-group-item-heading"><%= qualities[i].name %></h4>
+        </li>
+    	<% } %>
     </ul>
 
 

@@ -1,7 +1,7 @@
 //event listeners for signup and login buttons
 $(document).ready(function(){
 
-
+	//Event Listener for Hero Entry
 	$("#entry-form").on("submit", function(e){
 		e.preventDefault();
 		var entryData = $("#entry-form").serialize();
@@ -18,18 +18,6 @@ $(document).ready(function(){
 		});
 	});
 
-
-	/*
-	var $SignupForm = $("signup-form");
-	$SignupForm.on("submit", function(e){
-		e.PreventDefault();
-		var user = $("#signup-form").serialize();
-	  $.post('/users', user, function(data){
-	    console.log(data);
-	  });
-	});
-	*/
-
 	//this will hide the log out button and will show when user logins 
 	//$('.logged-in').hide();
 
@@ -40,7 +28,7 @@ $(document).ready(function(){
 		var signupData = $("#signup-form").serialize();
 		console.log(signupData);
 		$.post('/users', signupData, function(response){
-			
+			alert("you signed up!");
 			//$('.not-logged-in').hide();
 				console.log(response);
 		});
