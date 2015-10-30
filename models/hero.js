@@ -4,19 +4,19 @@ var mongoose = require ("mongoose");
 
 		//defines hero Schema
 var heroSchema = new Schema({
-	Input: String
+	input: String
 });
 
 //
 
 //creates a new hero
-heroSchema.statics.createSecure = function(Input, callback) {
+heroSchema.statics.createSecure = function(input, callback) {
 
 	var Heromodel = this;
 
 //creates a new hero into the db
 	 Heromodel.create({
-        Input: Input
+        input: input
       }, callback);
 };
 //creates a model based on the schema

@@ -51,7 +51,7 @@
             <li><a href="#">Contact</a></li>
             <li><a href="/hero">Hero Name</a></li>
             <li><a href=""><%= email %> </a></li>
-            <% if (!email) { %>
+            <% if (!hero) { %>
             	<li class = "not-logged-in"><a href="/signup">Sign Up</a></li>
             	<li class = "not-logged-in"><a href="/login">Log In</a></li>
             <% } else { %>
@@ -70,7 +70,7 @@
     <div class="container">
 
 
-    <header class = "text-center">Welcome, <%= email %>. Your journey is about to unfold...</header>
+    <header class = "text-center">Welcome, <%= hero %>. Your journey is about to unfold...</header>
 </div>
 </div>
 

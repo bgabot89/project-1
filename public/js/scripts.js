@@ -5,8 +5,14 @@ $(document).ready(function(){
 	$("#entry-form").on("submit", function(e){
 		e.preventDefault();
 		var entryData = $("#entry-form").serialize();
-		console.log(entryData);
-		$.post('/heros', entryData, function(response){
+		//console.log(entryData);
+		$.ajax({
+				url: '/heros',
+				type: 'POST',
+				data: entryData
+				//async: false
+				}).done(function(response){
+					window.location.assign('/home');
 			//$('.not-logged-in').hide();
 				console.log(response);
 		});

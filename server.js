@@ -70,9 +70,19 @@ if (list.length !== 0){
 //route to get to the home ejs file from the taskbar
 app.get('/home', function (req,res){
 	var email = req.session.email;
+	var hero = req.session.hero;
+	// console.log(req.session, 'HOME req.session');
+	res.render('home', {hero: hero, email:email});
+});
+
+//route to get to the home ejs file from the taskbar
+app.get('/home', function (req,res){
+	var email = req.session.email;
+	//var hero = req.session.hero;
 	// console.log(req.session, 'HOME req.session');
 	res.render('home', {email: email});
 });
+
 
 
 
@@ -130,9 +140,11 @@ app.get('/users', function (req,res){
 //new user route -- creates a new user with password
 app.post('/heros', function (req,res){
 //console.log(req.body);
-	Hero.createSecure(req.body.Input, function (err,hero){
-		console.log(req.body.Input);
-		res.json(hero);
+//console.log(Hero);
+	Hero.createSecure(req.body.input, function (err,hero){
+		req.session.hero = req.body.input;
+		//console.log(req.body.input);
+		res.redirect('/home');
 
 
 });
