@@ -34,20 +34,20 @@ var textTemp = $("div.description").text();
 */
 
 //selects entire description and replaces it with something else
-function descriptionType(){
+var descriptionType = function(){
 	
 $(".description").text(function () {
 	console.log(".description");
     return $(this).text().replace("Noble", "Knight"); 
 });
 }
-descriptionType();
 
 
-
+setTimeout(descriptionType, 5000);
 
 
 // classType();
 setTimeout(classType, 1000);
 });
+
 

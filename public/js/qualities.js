@@ -4,7 +4,6 @@ Submitter();
 SubmitForm();
 });
 
-
 //event listener for submit button on qualities ejs page
 function Submitter(){
 //set event listener

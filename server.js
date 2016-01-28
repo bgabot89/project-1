@@ -29,7 +29,6 @@ app.use(session({
 	cookie: { maxAge: 180000 } // 3 minutes
 }));
 
-
 //mongod connect to another terminal
 mongoose.connect( process.env.MONGOLAB_URI ||
                       process.env.MONGOHQ_URL || 
@@ -64,7 +63,7 @@ if (qualities.length !== 0){
 		newQuality.id=0;
 	}
 	//pushes unique id into json
-	//qualities.push(qualities);
+	qualities.push(newQuality);
 	res.json(qualities);
 });
 
@@ -124,15 +123,23 @@ app.get('/hero', function (req,res){
 
 //new user route -- creates a new user with password
 app.post('/users', function (req,res){
-//console.log(req.body);
-	User.createSecure(req.body.email, req.body.password, function (err,user){
+	var user = req.body;
+	console.log(user);
+	User.createSecure(user.email, user.password, function (err,user){
+		if (user.save) {
 		req.session.userId = user._id;
-		res.json(user);
-
-
+		req.session.user = user;
+		res.json({user: user, msg: "User Created Successfully"});
+	} else {
+		console.log('There was an error when creating a new user');
+	}
 });
 });
 
+//check to see if user is logged in
+app.get('/current-user', function (req,res){
+	res.json({user: req.session.user});
+});
 
 
 //when the user inputs data from the sign up form, it'll be added to the json
