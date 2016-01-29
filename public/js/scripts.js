@@ -16,7 +16,7 @@ $(document).ready(function(){
 			//$('.not-logged-in').hide();
 				console.log(response);
 		});
-	});
+	})
 
 
 //function checkAuthorization on reload
@@ -26,14 +26,16 @@ $(document).ready(function(){
 			if (data.user){
 				$('.not-logged-in').hide();
 				$('.logged-in').show();
+				console.log('logged in!');
 				}else {
 				$('.not-logged-in').show();
 				$('.logged-in').hide();
+				console.log('error logging in');
 			}
 		}
-	)};
-		checkAuth();
-
+	)}
+		
+	checkAuth();
 	//posts the data to POST form signup, submit listener
 
 	$("#signup-form").on("submit", function(e){
@@ -43,23 +45,28 @@ $(document).ready(function(){
 			$('.not-logged-in').hide();
 			$('.logged-in').show();
 				console.log(response);
+				window.location.href=('/home');
 		});
-	});
+	})
 
 	//event listener for login form
-	$("#login-form").on("submit", function(e){
-		//e.preventDefault();
-		var loginData = $("#login-form").serialize();
+	$("#login-form").submit(function(e){
+		e.preventDefault();
+		var loginData = $(this).serialize();
 		console.log('login data = ', loginData);
 		//sends a request to sessions with the users data
-		$.post('/sessions', loginData, {async: true}, function(response){
+		// $.post('/sessions', loginData, {async: true}, function(response){
+
+			$.post('/login', loginData, function (data){
+				console.log('logged in!');
 			//this will hide the log in and sign up buttons after signing up
-			$('.not-logged-in').hide();
-			$('.logged-in').show();
-			console.log('response = ', response);
+			// $('.not-logged-in').hide();
+			// $('.logged-in').show();
+			checkAuth();
+			window.location.href=('/home');
 		});
-	//});
-	});
+	})
+
 
 
 	//tests to see if user has logged out 
@@ -70,6 +77,6 @@ $(document).ready(function(){
 			$('.logged-in').hide();
 			console.log(data.msg);
 		});
-	});
+	})
 
 });

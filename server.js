@@ -181,7 +181,7 @@ app.get('/login', function (req,res){
 
 
 
-//route that authenticates the user and creates a new session
+//OLD ROUTE - FOR LOGIN SESSION - route that authenticates the user and creates a new session
 app.post('/sessions', function (req,res){
 	User.authenticate(req.body.email, req.body.password, function (err, loggedInUser){
 		if (err){
@@ -204,6 +204,19 @@ app.post('/sessions', function (req,res){
 	});
 });
 
+
+//new route for login path - jQuery hide and show works for this
+app.post('/login', function (req,res){
+	User.authenticate(req.body.email, req.body.password, function (err, user){
+		if (err) {
+			console.log("there was an err: ", err) 
+		} else {
+			req.session.user = user;
+			res.json = user;
+			res.redirect('/home');
+		}
+	})
+})
 
 //route that sends user to logout
 app.post('/logout', function (req,res){

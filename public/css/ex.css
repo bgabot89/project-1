@@ -122,9 +122,9 @@ h1{
   	background-color: green;
   }	
 
-  .logged-in{
+ /* li.logged-in{
     display:none;
-  }
+  }*/
 
   .description{
     color:white;
