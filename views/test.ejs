@@ -1,0 +1,176 @@
+<html>​
+<body>
+<head>​
+<!--Bootstrap JS from Bootstrap enables dropdown -->
+<!-- Bootstrap CSS from CDN works okay-->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/ex.css">
+<link rel="stylesheet" href="/static/css/test.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/static/js/scripts.js"></script>
+<script src="/static/js/test.js"></script>
+
+</head>
+<!-- Adds a navigation bar -->
+<div class="container-fluid">
+
+
+    <!-- Second navbar for profile settings -->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">IW-RPG</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+         <div class="collapse navbar-collapse" id="navbar-collapse-4">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="/hero">Hero Name</a></li>
+            <li class = "not-logged-in"><a href="/signup">Sign Up</a></li>
+            <li class = "not-logged-in"><a href="/login">Log In</a></li>
+           <li class = "logged-in"><a href="">Log Out</a></li>
+
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+</div><!-- /.container-fluid -->
+
+  <div id="quizzie">
+    <h1>What Type Of RPG Class Are You?</h1>
+
+    <!--Slide 1 -->
+    <div class="img-wrapper quiz-step step1 current" index="1">
+      <img class="img-responsive" src="static/css/images/Nobe.png">
+        <div class="img-overlay quiz-answer low-value" data-quizIndex="2">
+          <button class="btn btn-md btn-success btn-responsive">Like Me</button>
+      </div>
+    <div class= "img-overlay2 quiz-answer high-value" data-quizIndex="4">
+      <button class="btn btn-md btn-danger btn-responsive">Not Like Me</button>
+    </div>
+  </div>
+
+  <!--Slide 1 -->
+  <div class="img-wrapper step2 quiz-step" index="2">
+    <img class="img-responsive" src="static/css/images/Adventure.png">
+      <div class="img-overlay quiz-answer low-value" data-quizIndex="2">
+        <button class="btn btn-md btn-success btn-responsive">Like Me</button>
+    </div>
+  <div class= "img-overlay2 quiz-answer high-value" data-quizIndex="4">
+    <button class="btn btn-md btn-danger btn-responsive">Not Like Me</button>
+  </div>
+</div>
+
+<!--Slide 1 -->
+<div class="img-wrapper step3 quiz-step" index="3">
+  <img class="img-responsive" src="static/css/images/Free-Spirit.png">
+    <div class="img-overlay quiz-answer low-value" data-quizIndex="2">
+      <button class="btn btn-md btn-success btn-responsive">Like Me</button>
+  </div>
+<div class= "img-overlay2 quiz-answer high-value" data-quizIndex="4">
+  <button class="btn btn-md btn-danger btn-responsive">Not Like Me</button>
+</div>
+</div>
+
+
+<!--Slide 1 -->
+<div class="img-wrapper step4 quiz-step" index="4">
+  <img class="img-responsive" src="static/css/images/res.png">
+    <div class="img-overlay quiz-answer low-value" data-quizIndex="2">
+      <button class="btn btn-md btn-success btn-responsive">Like Me</button>
+  </div>
+<div class= "img-overlay2 quiz-answer high-value" data-quizIndex="4">
+  <button class="btn btn-md btn-danger btn-responsive">Not Like Me</button>
+</div>
+</div>
+
+      <!-- <ul class="quiz-step step1 current">
+          <li class="question">
+              <div class="question-wrap">
+                  <img class = "personality-image" style = "width: 800px" src="static/css/images/Nobe.png">
+              </div>
+          </li>
+          <li class="quiz-answer low-value" data-quizIndex="2">
+              <div class="answer-wrap">
+                  <p class="answer-text">Like Me</p>
+              </div>
+          </li>
+          <li class="quiz-answer high-value" data-quizIndex="4">
+              <div class="answer-wrap2">
+                  <p class="answer-text">Not Like Me</p>
+              </div>
+          </li>
+      </ul> -->
+      <!-- <ul class="quiz-step step2">
+          <li class="question">
+              <div class="question-wrap">
+                  <img class = "personality-image" style = "width: 800px" src="static/css/images/Adventure.png">
+              </div>
+          </li>
+          <li class="quiz-answer low-value" data-quizIndex="2">
+              <div class="answer-wrap">
+                  <p class="answer-text">Like Me</p>
+              </div>
+          </li>
+          <li class="quiz-answer high-value" data-quizIndex="4">
+              <div class="answer-wrap2">
+                  <p class="answer-text">Not Like Me</p>
+              </div>
+          </li>
+      </ul>
+      <ul class="quiz-step step3">
+          <li class="question">
+              <div class="question-wrap">
+                  <img class = "personality-image" style = "width: 800px" src="static/css/images/Free-Spirit.png">
+              </div>
+          </li>
+          <li class="quiz-answer low-value" data-quizIndex="2">
+              <div class="answer-wrap">
+                  <p class="answer-text">Like Me</p>
+              </div>
+          </li>
+          <li class="quiz-answer high-value" data-quizIndex="4">
+              <div class="answer-wrap2">
+                  <p class="answer-text">Not Like Me</p>
+              </div>
+          </li>
+      </ul>
+      <ul class="quiz-step step4">
+          <li class="question">
+              <div class="question-wrap">
+                  <img class = "personality-image" style = "width: 800px" src="static/css/images/res.png">
+              </div>
+          </li>
+          <li class="quiz-answer low-value" data-quizIndex="2">
+              <div class="answer-wrap">
+                  <p class="answer-text">Like Me</p>
+              </div>
+          </li>
+          <li class="quiz-answer high-value" data-quizIndex="4">
+              <div class="answer-wrap2">
+                  <p class="answer-text">Not Like Me</p>
+              </div>
+          </li>
+      </ul> -->
+      <ul id="results">
+          <li class="results-inner">
+              <p>Your result is:</p>
+              <h1></h1>
+              <p class="desc"></p>
+              <p class="answer-text">Take the test again</p>
+          </li>
+      </ul>
+  </div>

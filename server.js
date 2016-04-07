@@ -31,7 +31,7 @@ app.use(session({
 
 //mongod connect to another terminal
 mongoose.connect( process.env.MONGOLAB_URI ||
-                      process.env.MONGOHQ_URL || 
+                      process.env.MONGOHQ_URL ||
                       'mongodb://localhost/login_signup');
 
 //Data api for list of qualities
@@ -57,7 +57,7 @@ app.post("/api/qualities", function (req,res){
 var newQuality = req.body;
 //adds a unique id;
 if (qualities.length !== 0){
-	newQuality.id = qualities[qualities.length-1].id+1; 
+	newQuality.id = qualities[qualities.length-1].id+1;
 }
 	else {
 		newQuality.id=0;
@@ -84,7 +84,12 @@ app.get('/rpg', function (req,res){
 	res.render('index',{email: email});
 });
 
-//routes to about page 
+//routes to new rpg test
+app.get('/test', function (req,res){
+  res.render('test');
+});
+
+//routes to about page
 app.get('/about', function (req,res){
 	var email = req.session.email;
 	res.render('about',{email: email});
@@ -192,14 +197,14 @@ app.post('/sessions', function (req,res){
 		// console.log(req.session, 'before');
 		req.session.userId = loggedInUser._id;
 		req.session.email = loggedInUser.email;
-		
+
 		req.session.save(function(err){
 			// console.log(req.session, 'after');
 			console.log('Logged in. req.session.userId = ', req.session.userId);
 			res.redirect('/home');
 
 		});
-		
+
 		}
 	});
 });
@@ -209,7 +214,7 @@ app.post('/sessions', function (req,res){
 app.post('/login', function (req,res){
 	User.authenticate(req.body.email, req.body.password, function (err, user){
 		if (err) {
-			console.log("there was an err: ", err) 
+			console.log("there was an err: ", err)
 		} else {
 			req.session.user = user;
 			res.json = user;
@@ -247,7 +252,7 @@ app.get('/profile', function (req,res){
 */
 
 
-//JSON GET REQUEST FROM TRAITIFY 
+//JSON GET REQUEST FROM TRAITIFY
 
 //connects server to heroku
 app.listen(process.env.PORT  || 3000, function (){
