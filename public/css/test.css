@@ -153,6 +153,24 @@ h1, h2, p {
   display: none;
 }
 
+#quizzie .step5 {
+  display: none;
+}
+
+#quizzie .step6 {
+  display:none;
+}
+
+
+#quizzie .step7 {
+  display:none;
+}
+
+
+#quizzie .step8 {
+  display:none;
+}
+
 #results {
   display:none;
 }

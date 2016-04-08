@@ -14,6 +14,9 @@ var resultOptions = [
         desc: '<p>Here, have an Archer</p><img src="http://i.imgur.com/NH5cunw.png"/>'}
 ];
 
+//Global variable to use for number of results, change if needed
+var QuestionNumbers = 8;
+
 // global variables
 var quizSteps = $('#quizzie .quiz-step'),
     totalScore = 0;
@@ -78,7 +81,7 @@ function nextStep(currentStep) {
     var y = currentStep.attr('index');
     i= parseInt(y);
     console.log(i);
-    if (i<resultOptions.length){
+    if (i<=QuestionNumbers){
     $('.step'+[i]).hide();
     $('.step'+[i+1]).show();
     console.log('looped');
