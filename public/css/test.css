@@ -59,6 +59,12 @@ h1, h2, p {
   text-align:center;
 }
 
+.img-overlay:before {
+    content: ' ';
+    display: block;
+    heightL 50%;
+}
+
 .img-overlay2 {
   position: absolute;
   top: 350;
@@ -69,22 +75,60 @@ h1, h2, p {
   text-align:center;
 }
 
-.btn-responsive {
+.btn-responsive1 {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333;
   border-radius: 6px;
+  font-family: 'Papyrus', 'cursive';
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn-responsive2 {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333;
+  border-radius: 6px;
+  font-family: 'Papyrus', 'cursive';
+  text-shadow: 1px 1px 2px black;
 }
 
 /* These will fix the images to help out with responsive design */
 @media (max-width:760px) {
-  .btn-responsive {
+  .btn-responsive1 {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+@media (max-width: 760px) {
+  .img-overlay {
+    top: 150;
+    left: -5px;
+  }
+}
+
+@media (max-width: 760px) {
+  .img-overlay2 {
+    top: 150;
+    left: 275;
+  }
+}
+
+  @media (max-width:760px) {
+    .quiz-answer {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width:760px) {
+  .btn-responsive2 {
     font-size: 12px;
     line-height: 1.5;
     border-radius: 3px;
-    margin: -200px;
   }
 }
+
 
 @media (max-width: 750px) {
   .img-wrapper {
