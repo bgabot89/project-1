@@ -52,6 +52,31 @@
   <div id="quizzie">
     <h1>What Type Of RPG Class Are You?</h1>
 
+    <!--Test new render of images for site, will show top 3 results -->
+    <!-- <div class = "row">
+
+    <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+      <img id = "pic1" style = "width:300px" src="/static/css/images/barb.png"/>
+      <h1> Barbarian </h1>
+      <img class = "trophy" style="width:50px" src="/static/css/images/gold.png"/>
+      <p> CHOCALATY CHOCO THE CHOCOLATE CHICKEN !!!!! something something something</p>
+    </div>
+
+    <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+      <img id = "pic2" style = "width:200px" src="/static/css/images/rogue.png"/>
+      <h1> Rogue </h1>
+      <img class = "trophy" style="width:50px" src="/static/css/images/silver.png"/>
+    </div>
+
+    <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+      <img id = "pic3" style = "width:100px" src="/static/css/images/cleric.png"/>
+      <h1> Cleric </h1>
+      <img class="trophy" style="width:50px" src="/static/css/images/bronze.png"/>
+    </div>
+
+  </div> -->
+
+
     <!--Slide 1 -->
     <div class="img-wrapper quiz-step step1 current" index="1">
       <img class="img-responsive" src="static/css/images/Nobe.png">
@@ -141,81 +166,45 @@
 </div>
 </div>
 
-
-      <!-- <ul class="quiz-step step1 current">
-          <li class="question">
-              <div class="question-wrap">
-                  <img class = "personality-image" style = "width: 800px" src="static/css/images/Nobe.png">
-              </div>
-          </li>
-          <li class="quiz-answer low-value" data-quizIndex="2">
-              <div class="answer-wrap">
-                  <p class="answer-text">Like Me</p>
-              </div>
-          </li>
-          <li class="quiz-answer high-value" data-quizIndex="4">
-              <div class="answer-wrap2">
-                  <p class="answer-text">Not Like Me</p>
-              </div>
-          </li>
-      </ul> -->
-      <!-- <ul class="quiz-step step2">
-          <li class="question">
-              <div class="question-wrap">
-                  <img class = "personality-image" style = "width: 800px" src="static/css/images/Adventure.png">
-              </div>
-          </li>
-          <li class="quiz-answer low-value" data-quizIndex="2">
-              <div class="answer-wrap">
-                  <p class="answer-text">Like Me</p>
-              </div>
-          </li>
-          <li class="quiz-answer high-value" data-quizIndex="4">
-              <div class="answer-wrap2">
-                  <p class="answer-text">Not Like Me</p>
-              </div>
-          </li>
-      </ul>
-      <ul class="quiz-step step3">
-          <li class="question">
-              <div class="question-wrap">
-                  <img class = "personality-image" style = "width: 800px" src="static/css/images/Free-Spirit.png">
-              </div>
-          </li>
-          <li class="quiz-answer low-value" data-quizIndex="2">
-              <div class="answer-wrap">
-                  <p class="answer-text">Like Me</p>
-              </div>
-          </li>
-          <li class="quiz-answer high-value" data-quizIndex="4">
-              <div class="answer-wrap2">
-                  <p class="answer-text">Not Like Me</p>
-              </div>
-          </li>
-      </ul>
-      <ul class="quiz-step step4">
-          <li class="question">
-              <div class="question-wrap">
-                  <img class = "personality-image" style = "width: 800px" src="static/css/images/res.png">
-              </div>
-          </li>
-          <li class="quiz-answer low-value" data-quizIndex="2">
-              <div class="answer-wrap">
-                  <p class="answer-text">Like Me</p>
-              </div>
-          </li>
-          <li class="quiz-answer high-value" data-quizIndex="4">
-              <div class="answer-wrap2">
-                  <p class="answer-text">Not Like Me</p>
-              </div>
-          </li>
-      </ul> -->
-      <ul id="results">
+<!--This will render the results after completing the test -->
+      <!-- <ul style = "list-style-type:none" id="results">
           <li class="results-inner">
               <p>Your result is:</p>
               <h1></h1>
               <p class="desc"></p>
+              <p>Your 2nd result is:</p>
+              <h2></h2>
+              <p class="desc2"></p>
+              <h3></h3>
+              <p class="desc3"></p>
               <p class="answer-text">Take the test again</p>
           </li>
-      </ul>
+      </ul> -->
+
+      <div id = "results" class = "row">
+        <h4> Here are your Results: </h4>
+
+      <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+        <span id= "pic1" class="pic"> </span>
+        <h1> </h1>
+        <img class = "trophy" style="width:50px" src="/static/css/images/gold.png"/>
+        <p class="desc"></p>
+      </div>
+
+      <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+        <span id = "pic2" class = "pic"></span>
+        <h2> </h2>
+        <img class = "trophy" style="width:50px" src="/static/css/images/silver.png"/>
+        <p class="desc2"></p>
+      </div>
+
+      <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+        <span id = "pic3" class = "pic"></span>
+        <h3></h3>
+        <img class="trophy" style="width:50px" src="/static/css/images/bronze.png"/>
+        <p class="desc3"></p>
+      </div>
+
+    </div>
+
   </div>

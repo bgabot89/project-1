@@ -16,17 +16,17 @@ body {
   color: #fff;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: 'Satisfy', 'cursive';
   font-size: 2.5em;
 }
 
-h2, p {
+p {
   font-family: 'Pathway Gothic One', 'sans-serif';
   font-size: 2em;
 }
 
-h1, h2, p {
+h1, h2, h3, h4, p {
   text-align: center;
   display: block;
   width: auto;
@@ -173,4 +173,30 @@ h1, h2, p {
 
 #results {
   display:none;
+}
+
+#pic1 .result-pic {
+  width: 300px;
+}
+
+#pic2 .result-pic {
+  width: 200px;
+  margin-top: 100px;
+}
+
+#pic3 .result-pic {
+  width: 100px;
+  margin-top: 200px;
+}
+
+.result-pic:hover {
+  cursor: pointer;
+
+}
+
+/*.info {
+  visibility:hidden;
+}*/
+.trophy {
+  padding-top: 10px;
 }

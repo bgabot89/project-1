@@ -14,7 +14,7 @@ h1 {
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 
 }
 
@@ -27,13 +27,13 @@ body {
 
 p{
   font-size:40px;
-  font-family:Herculanum;  
+  font-family:Herculanum;
   color:white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 
 
 
@@ -41,47 +41,47 @@ p{
 
 ol {
    font-size:14px;
-  font-family:Herculanum;  
+  font-family:Herculanum;
   color:white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 }
 p1 {
   font-size:30px;
-  font-family:Herculanum;  
+  font-family:Herculanum;
   color:white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 
 }
 
 p2 {
   font-size:14px;
-  font-family:Herculanum;  
+  font-family:Herculanum;
   color:white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 
 }
 
-h1{
+h1,h2,h3,h4 {
    font-size:14px;
-  font-family:Herculanum;  
+  font-family:Herculanum;
   color:white;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000; 
+    1px 1px 0 #000;
 
 }
 	.container {
@@ -121,7 +121,7 @@ h1{
   }
   .personality-types {
   	background-color: green;
-  }	
+  }
 
  /* li.logged-in{
     display:none;
