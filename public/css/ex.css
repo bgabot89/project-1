@@ -1,10 +1,57 @@
-h1 {
-		font-size:15px;
+h6 {
+		font-size:75px;
+		font-family: Herculanum;
+		padding: 100px 0px 50px 0px;
+		color: white;
+}
+
+.bg-header {
+		font-size:75px;
+		font-family: Herculanum;
+		color: white;
+		text-align: center;
+		padding: 0px 0px 0px 0px;
+}
+
+.media {
+	background-color: #DDDDDD;
+	margin: 10px;
+}
+
+.media-heading {
+	margin-top: 20px;
+}
+
+.media-object {
+	margin-top: 20px;
 }
 
 
+h5 {
+	font-family: Ringbearer;
+	font-size: 60px;
+	color: white;
+	z-index: 1;
+	right: 450;
+	bottom: 400;
+	position: absolute;
+	text-shadow: 2px 2px black;
+}
+.game-logo{
+		position: absolute;
+		z-index: 1;
+		top: 200;
+		left: 425;
+}
+
+a {
+	color: white;
+	font-size: 20px;
+	margin: 0px 10px 0px 10px;
+}
+
 .navbar-brand{
-  font-family: Knights Quest;
+  font-family: Ringbearer;
   font-size:40px;
 }
 .jumbotron {
@@ -19,24 +66,11 @@ h1 {
 }
 
 body {
-  background: url("images/dragon.jpg");
+  /*background: url("images/dragon.jpg");*/
+	background: #677c8a;
   background-size: 100% auto;
   background-attachment: fixed;
   background-repeat: repeat-y;
-}
-
-p{
-  font-size:40px;
-  font-family:Herculanum;
-  color:white;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-
-
-
 }
 
 ol {
@@ -74,14 +108,12 @@ p2 {
 }
 
 h1,h2,h3,h4 {
-   font-size:14px;
-  font-family:Herculanum;
   color:white;
-    text-shadow:
+    /*text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000;
+    1px 1px 0 #000;*/
 
 }
 	.container {
@@ -136,9 +168,140 @@ h1,h2,h3,h4 {
   }
 
   p{
-  	font-size:15px;
+	  font-size:16px;
+	  color:white;
+		font-family: Arial;
+		padding-top: 25px;
+	    /*text-shadow:
+	    -1px -1px 0 #000,
+	    1px -1px 0 #000,
+	    -1px 1px 0 #000,
+	    1px 1px 0 #000;*/
 
   }
   .wrapper {
     text-align:center;
   }
+
+	#header-bg {
+		margin-top: -120px;
+		z-index:1;
+		position: relative;
+		background:  linear-gradient(
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.25)
+    ),
+		/*image*/
+		url('/static/css/images/rpg_wall.jpg');
+		background-position: center;
+		background-size: cover;
+		height: 800px;
+		width: 100%;
+	}
+
+
+	/*dungeons and dragons page */
+
+	#dungeons-bg {
+		margin-top: -120px;
+		z-index:1;
+		position: relative;
+		background:  linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+		),
+		/*image*/
+		url('/static/css/images/wallpapers/Dungeonswall.jpg');
+		background-position: center;
+		background-size: cover;
+		height: 500px;
+		width: 100%;
+	}
+
+	/*league page */
+
+	#league-bg {
+		margin-top: -120px;
+		z-index:1;
+		position: relative;
+		background:  linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+		),
+		/*image*/
+		url('/static/css/images/wallpapers/leaguewall.jpg');
+		background-position: center;
+		background-size: cover;
+		height: 500px;
+		width: 100%;
+	}
+
+
+	/*fire page */
+
+	#fire-bg {
+		margin-top: -120px;
+		z-index:1;
+		position: relative;
+		background:  linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+		),
+		/*image*/
+		url('/static/css/images/wallpapers/firewall.jpg');
+		background-position: center;
+		background-size: cover;
+		height: 500px;
+		width: 100%;
+	}
+
+	#dark-bg {
+		margin-top: -120px;
+		z-index:1;
+		position: relative;
+		background:  linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+		),
+		/*image*/
+		url('/static/css/images/wallpapers/dark_wall.jpg');
+		background-position: center;
+		background-size: cover;
+		height: 500px;
+		width: 100%;
+	}
+
+	#pokemon-bg {
+		margin-top: -120px;
+		z-index:1;
+		position: relative;
+		background:  linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+		),
+		/*image*/
+		url('/static/css/images/wallpapers/pokemonwall.jpg');
+		background-position: center;
+		background-size: cover;
+		height: 500px;
+		width: 100%;
+	}
+
+
+
+
+	.navbar {
+		z-index: 10;
+	}
+
+	#getting-started, .instruct {
+		background-color: #5a5a5a;
+	}
+
+	.row {
+	margin-right: 0px;
+}
+
+	#about {
+		padding-bottom: 100px;
+	}

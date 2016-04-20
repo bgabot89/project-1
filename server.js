@@ -84,10 +84,49 @@ app.get('/rpg', function (req,res){
 	res.render('index',{email: email});
 });
 
-//routes to new rpg test
+//routes to tests
+app.get('/tests', function (req,res){
+  res.render('TestSelection');
+});
+
+//routes to D&D page
+app.get('/dungeons', function (req,res){
+  res.render('dungeons');
+});
+
+//routes to League page
+app.get('/league', function (req,res){
+  res.render('league');
+});
+
+//routes to League page
+app.get('/leaguetest', function (req,res){
+  res.render('LeagueTest');
+});
+
+
+//routes to Fire Emblem page
+app.get('/fire', function (req,res){
+  res.render('fire');
+});
+
+//routes to Fire Emblem page
+app.get('/dark', function (req,res){
+  res.render('darksouls');
+});
+
+//routes to Pokemon page
+app.get('/pokemon', function (req,res){
+  res.render('pokemon');
+});
+
+
+
+//routes to D&D Personality test
 app.get('/test', function (req,res){
   res.render('test');
 });
+
 
 //routes to about page
 app.get('/about', function (req,res){
