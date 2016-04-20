@@ -111,6 +111,11 @@ app.get('/fire', function (req,res){
 });
 
 //routes to Fire Emblem page
+app.get('/firetest', function (req,res){
+  res.render('FireTest');
+});
+
+//routes to Fire Emblem page
 app.get('/dark', function (req,res){
   res.render('darksouls');
 });

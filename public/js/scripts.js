@@ -26,6 +26,8 @@ $(document).ready(function(){
 			if (data.user){
 				$('.not-logged-in').hide();
 				$('.logged-in').show();
+				$('.test-button').show();
+				$('.sign-up-button').hide();
 				console.log('logged in!');
 				}else {
 				$('.not-logged-in').show();
@@ -34,7 +36,7 @@ $(document).ready(function(){
 			}
 		}
 	)}
-		
+
 	checkAuth();
 	//posts the data to POST form signup, submit listener
 
@@ -44,6 +46,8 @@ $(document).ready(function(){
 		$.post('/users', signupData, function(response){
 			$('.not-logged-in').hide();
 			$('.logged-in').show();
+			$('.test-button').show();
+			$('.sign-up-button').hide();
 				console.log(response);
 				window.location.href=('/home');
 		});
@@ -69,7 +73,7 @@ $(document).ready(function(){
 
 
 
-	//tests to see if user has logged out 
+	//tests to see if user has logged out
 	$(".logged-in").on("click",function(){
 		console.log("works");
 		$.post('/logout', function(data){

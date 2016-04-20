@@ -4,19 +4,19 @@ $( document ).ready(function() {
 var resultOptions = [
     {   title: 'ADC',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/LeagueSlides/ADC.png"/>',
-        desc: '<p class="info">An abbreviation of Attack Damage Carry. ADC Champions are champions that deals, strong, continous damage with their basic attacks and scales with attack-related stats. Their role is to protect the bottom role along with the a Supporting Champion. </p>'},
+        desc: '<p class="info">An abbreviation of Attack Damage Carry. ADC Champions are champions that deals, strong, continous damage with their basic attacks and scales with attack-related stats. Their role is to protect the bottom role along with a Supporting Champion. </p>'},
     {   title: 'AP Mid',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/LeagueSlides/ApMid.png"/>',
         desc: '<p class="info">An abbreviation of Ability Power. AP are usually mage-like champions whose objective is to protect the mid lane. As an AP Mid carry, your primary role is to cast your burst to kill an enemy carry quickly or poking the other team to force them back or for a quick engage once they have been weakened.</p>'},
     {   title: 'Solo Top',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/LeagueSlides/solotop.png"/>',
-        desc: '<p class="info">Your role is Solo Top, whose primary objective is to protect the uppermost lane. Unlike the mid and bottom lane objectives, whose primary goal is to fight over map objectives, your goal as solo top laner is to farm. Solo top champions will usually also be very good pushers/farmers, in order to keep up proper lane pressure throughout the entire game.</p>'},
+        desc: '<p class="info">Your role is Solo Top, whose primary objective is to protect the uppermost lane. Unlike the mid and bottom lane objectives, whose primary goal is to fight over map objectives, your goal as a solo top laner is to farm. Solo top champions will usually also be very good pushers/farmers, in order to keep up proper lane pressure throughout the entire game.</p>'},
     {   title: 'Support',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/LeagueSlides/support.png"/>',
         desc: '<p class="info">Supporting champions make plays by enabling their allies through buffs and heals, or disrupting enemy lines through crowd control. They protect the bottom lane, along with an ADC carry champion.</p>'},
     {   title: 'Jungler',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/LeagueSlides/jungler.png"/>',
-        desc: '<p class="info">You are a Rogue, a versatile character specializing in sneaky combat and tactics. Rogues are stealthy and dextrous and are capable of disarming many traps and locks. Their main weapon of choice is the dagger.</p>'}
+        desc: '<p class="info">Your role is the Jungler. Unlike the other League roles, junglers are not designated a specific lane and rely on slaying on monsters in the jungle to gain experience and gold. Because monsters give powerful buffs to your champion when slain, Junglers are often optimal for ganking enemy champions.</p>'}
 ];
 
 //Global variable to use for number of results, change if needed

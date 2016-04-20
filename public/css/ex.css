@@ -23,7 +23,7 @@ h6 {
 }
 
 .media-object {
-	margin-top: 20px;
+	margin: 20px 0px 10px 10px;
 }
 
 
@@ -32,7 +32,7 @@ h5 {
 	font-size: 60px;
 	color: white;
 	z-index: 1;
-	right: 450;
+	right: 500;
 	bottom: 400;
 	position: absolute;
 	text-shadow: 2px 2px black;
@@ -304,4 +304,30 @@ h1,h2,h3,h4 {
 
 	#about {
 		padding-bottom: 100px;
+	}
+
+	.navbar-inverse {
+		opacity: 0.6;
+	}
+
+	.navbar {
+		margin-top: -20px;
+	}
+
+	.instruct {
+		padding-bottom: 75px;
+	}
+
+	#browse-button {
+		border-radius: 20px;
+	}
+
+	.test-button {
+		border-radius: 20px;
+		display: none;
+	}
+
+	.sign-up-button {
+		border-radius: 20px;
+		margin-top: -50px;
 	}

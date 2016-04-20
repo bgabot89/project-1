@@ -8,6 +8,7 @@ $(document).ready(function(){
 			if (data.user){
 				$('.not-logged-in').hide();
 				$('.logged-in').show();
+				$('.test-button').show();
 				console.log('logged in!');
 				}else {
 				$('.not-logged-in').show();
@@ -16,7 +17,7 @@ $(document).ready(function(){
 			}
 		}
 	)}
-		
+
 	checkAuth();
 
 	//event listener for login form
@@ -28,9 +29,10 @@ $(document).ready(function(){
 		// $.post('/sessions', loginData, {async: true}, function(response){
 
 			$.post('/sessions', loginData, function(response){
-			//this will hide the log in and sign up buttons after signing up
+			//this will hide the log in and sign up buttons after signing up, as well the Take a test button
 			$('.not-logged-in').hide();
 			$('.logged-in').show();
+			$('.test-button').show();
 			window.location.href=('/home');
 		});
 	});
