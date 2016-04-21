@@ -5,12 +5,25 @@ h6 {
 		color: white;
 }
 
+.header-line {
+	display:inline-block;
+	border-bottom:5px solid white;
+	padding-bottom:20px;
+}
+
+#game-header {
+	font-family: Herculanum;
+	color: white;
+	font-size:75px;
+	padding-bottom: 50px;
+}
+
 .bg-header {
 		font-size:75px;
 		font-family: Herculanum;
 		color: white;
 		text-align: center;
-		padding: 0px 0px 0px 0px;
+		padding: 50px 0px 40px 0px;
 }
 
 .media {
@@ -37,18 +50,72 @@ h5 {
 	position: absolute;
 	text-shadow: 2px 2px black;
 }
+
+@media screen and (max-width: 900px) {
+	h5 {
+		right:150;
+	}
+}
+
+@media screen and (max-width: 500px){
+	h5 {
+		right:10;
+	}
+}
+
+
+
+@media screen and (max-width: 1350px) and (min-width: 900px){
+	h5 {
+		right:400;
+	}
+}
+
+
 .game-logo{
 		position: absolute;
 		z-index: 1;
 		top: 200;
-		left: 425;
+		left: 475;
 }
+
+@media screen and (max-width: 1350px){
+	.game-logo {
+		left:350;
+	}
+}
+
+@media screen and (max-width: 1100px){
+	.game-logo {
+		left:200;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.game-logo {
+		left:60;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.game-logo {
+		left:0;
+		width: 100px;
+	}
+}
+
+#sign-upref, #login-href {
+	color: red;
+	margin: 0px 5px 0px 5px;
+}
+
 
 a {
 	color: white;
 	font-size: 20px;
 	margin: 0px 10px 0px 10px;
 }
+
 
 .navbar-brand{
   font-family: Ringbearer;
@@ -171,7 +238,7 @@ h1,h2,h3,h4 {
 	  font-size:16px;
 	  color:white;
 		font-family: Arial;
-		padding-top: 25px;
+		padding-top: 10px;
 	    /*text-shadow:
 	    -1px -1px 0 #000,
 	    1px -1px 0 #000,
@@ -183,14 +250,15 @@ h1,h2,h3,h4 {
     text-align:center;
   }
 
+
 	#header-bg {
 		margin-top: -120px;
 		z-index:1;
 		position: relative;
 		background:  linear-gradient(
-      rgba(0,0,0,0.25),
-      rgba(0,0,0,0.25)
-    ),
+			rgba(0,0,0,0.25),
+			rgba(0,0,0,0.25)
+		),
 		/*image*/
 		url('/static/css/images/rpg_wall.jpg');
 		background-position: center;
@@ -287,11 +355,26 @@ h1,h2,h3,h4 {
 		width: 100%;
 	}
 
-
+	#dragon-bg {
+		margin-top: -120px;
+		z-index:1;
+		position: relative;
+		background:  linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+		),
+		/*image*/
+		url('/static/css/images/wallpapers/dragonwall.jpg');
+		background-position: center bottom;
+		background-size: cover;
+		height: 500px;
+		width: 100%;
+	}
 
 
 	.navbar {
 		z-index: 10;
+		margin-top: -20px;
 	}
 
 	#getting-started, .instruct {
@@ -307,11 +390,9 @@ h1,h2,h3,h4 {
 	}
 
 	.navbar-inverse {
-		opacity: 0.6;
-	}
-
-	.navbar {
-		margin-top: -20px;
+		/*opacity: 0.4;*/
+		background-color: rgba(0, 0, 0, 0.4);
+		border: none;
 	}
 
 	.instruct {
@@ -320,14 +401,58 @@ h1,h2,h3,h4 {
 
 	#browse-button {
 		border-radius: 20px;
+		margin-top: 30px;
 	}
 
 	.test-button {
 		border-radius: 20px;
 		display: none;
+		margin:  0px 0px 0px 0px;
 	}
 
-	.sign-up-button {
-		border-radius: 20px;
-		margin-top: -50px;
+	.navbar-inverse .navbar-nav > li > a {
+		color:white;
+	}
+
+	.navbar-inverse .navbar-nav > li > a:hover {
+		text-decoration: underline;
+	}
+
+	.sign-up-note {
+		margin-top: -30px;
+		color: black;
+	}
+
+  #take-a-test {
+		margin-bottom: 40px;
+	}
+	#copyright {
+		background-color: black;
+		height: 100px;
+	}
+
+	#copy-pp{
+		padding-top: 40px;
+	}
+
+	.sign-in {
+		background-color: white;
+	}
+
+	#login-text {
+		color: black;
+	}
+
+	hr {
+	border-width: 3px;
+	}
+
+	.login-btn {
+		width: 200px;
+		font-size: 20px;
+	}
+
+	.field {
+		font-size: 17px;
+		color:black;
 	}

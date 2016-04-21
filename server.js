@@ -110,12 +110,12 @@ app.get('/fire', function (req,res){
   res.render('fire');
 });
 
-//routes to Fire Emblem page
+//routes to Fire Emblem Test page
 app.get('/firetest', function (req,res){
   res.render('FireTest');
 });
 
-//routes to Fire Emblem page
+//routes to Dark Souls page
 app.get('/dark', function (req,res){
   res.render('darksouls');
 });
@@ -125,11 +125,19 @@ app.get('/pokemon', function (req,res){
   res.render('pokemon');
 });
 
-
+//routes to Pokemon  Test page
+app.get('/pokemontest', function (req,res){
+  res.render('PokemonTest');
+});
 
 //routes to D&D Personality test
 app.get('/test', function (req,res){
   res.render('test');
+});
+
+//routes to Dragon Age page
+app.get('/dragonage', function (req,res){
+  res.render('dragonage');
 });
 
 

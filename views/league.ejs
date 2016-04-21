@@ -15,7 +15,7 @@
 <!-- Adds a navigation bar -->
 <div>
 	    <!-- Second navbar for profile settings -->
-  <nav class="navbar">
+  <nav class="navbar navbar-inverse">
     <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -31,9 +31,7 @@
    <div class="collapse navbar-collapse" id="navbar-collapse-4">
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/home">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/hero">Hero Name</a></li>
+      <li><a href="/tests">Tests</a></li>
     	<li class = "not-logged-in"><a href="/signup">Sign Up</a></li>
     	<li class = "not-logged-in"><a href="/login">Log In</a></li>
      <li class = "logged-in"><a href="">Log Out</a></li>
@@ -49,7 +47,7 @@
   <img style = "width: 500px" src= "/static/css/images/logo/league_logo.png">
 </div>
 
-<h6 class="bg-header text-center"> List of Tests </h6>
+<h6 class="bg-header text-center"> <span class="header-line"> List of Tests </span> </h6>
 
 <div class="media">
   <div class="media-left">
@@ -60,6 +58,8 @@
   <div class="media-body">
     <h4 class="media-heading">League of Legends Role Test</h4>
     Determine which of the five League of Legends roles (Top Lane, Mid Lane, ADC, Support or Jungler) best describes you.
+    <p> <a href="/leaguetest" style="width:150px;" class="btn btn-success test-button" role="button">Take the test</a> </p>
+    <p class = "sign-up-note"> You are not logged in, please<a id="sign-upref" href ="/signup">sign up</a>for an account or if you have one, <a id="login-href" href ="/login"> log in </a> to your account </p>
   </div>
 </div>
 

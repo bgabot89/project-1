@@ -15,7 +15,7 @@
 <!-- Adds a navigation bar -->
 <div>
 	    <!-- Second navbar for profile settings -->
-  <nav class="navbar">
+  <nav class="navbar navbar-inverse">
     <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -47,7 +47,7 @@
   <img style = "width: 500px" src= "/static/css/images/logo/D&D_logo.png">
 </div>
 
-<h6 class="bg-header text-center"> List of Tests </h6>
+<h6 class="bg-header text-center"><span class="header-line"> List of Tests </span> </h6>
 
 <div class="media">
   <div class="media-left">
@@ -57,7 +57,7 @@
     <h4 class="media-heading">D&D Class Test</h4>
     Determine which Dungeons & Dragons class best describes you.
     <p> <a href="/test" style="width:150px;" class="btn btn-success test-button" role="button">Take the test</a> </p>
-    <p> <a href="/signup" style="width:200px;" class="btn btn-success sign-up-button" role="button">Sign Up to take this Test</a> </p>
+    <p class = "sign-up-note"> You are not logged in, please<a id="sign-upref" href ="/signup">sign up</a>for an account or if you have one, <a id="login-href" href ="/login"> log in </a> to your account </p>
   </div>
 </div>
 

@@ -68,18 +68,25 @@
       margin-left: 200px;
     }
 
-    a {
+    /*a {
       font-size: 16px;
       display: inline-block;
       margin-bottom: 8px;
       width: calc(50% - 4px);
       margin-right: 8px;
-    }
+    }*/
 
-    a:hover .image-icon {
-     transform: scale(1.15);
-   }
+a:link {
+  text-decoration: none;
+}
 
+a:hover {
+  color: #f9f7f7;
+}
+
+a:hover .image-icon {
+  transform: scale(1.15);
+}
 
 figure {
   margin: 0;
@@ -122,17 +129,7 @@ figcaption {
   }
 }*/
  /*optimize for smaller screens */
-    @media screen and (min-width: 50em) {
+    /*@media screen and (min-width: 50em) {
       a {
         width: calc(25%);
-      }
-      /*a:nth-of-type(2n) {
-        margin-right: 0;
-      }
-      a:nth-of-type(5) {
-        margin-right: 8px;
-      }
-      a:nth-of-type(4n){
-        margin-right: 0;
       }*/
-    }

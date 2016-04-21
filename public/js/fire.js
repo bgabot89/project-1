@@ -2,19 +2,19 @@ $( document ).ready(function() {
 
 // Quiz result options in a separate object for flexibility
 var resultOptions = [
-    {   title: 'Axe User',
+    {   title: 'Axe Class',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/FireSlides/axe.png"/>',
         desc: '<p class="info">You are an axe user. Axe classes often have high hp and deal the most damage out of any class, but have low accuracy and frail defenses. In the weapon triangle, they are strong against lances but weak against swords. Example Classes: Berserker, Warrior </p>'},
-    {   title: 'Lance User',
+    {   title: 'Lance Class',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/FireSlides/lance.png"/>',
         desc: '<p class="info">You are a lance user. Lance classes are often classified as the middleground between swords and lances. They are not the most powerful weapon but not the most accurate either. Majority of lance classes have solid defenses such as Knights, but some can have poor defenses such as Pegasus Knights. Example Classes: Knight, Pegasus Knight</p>'},
-    {   title: 'Sword User',
+    {   title: 'Sword Class',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/FireSlides/sword.png"/>',
         desc: '<p class="info">You are a sword user. Sword classes are the most accurate of the weapon triangle, but are often the weakest in terms of damage. Most sword-primary wielding classes are often complemented with high speed but poor defenses. Example Classes: Swordmaster, Thief</p>'},
-    {   title: 'Bow User',
+    {   title: 'Bow Class',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/FireSlides/bow.png"/>',
         desc: '<p class="info">You are a bow user. Bow classes excel at hitting enemies from long range, however, they are vulnerable to close range attacks since they cannot make follow-up attacks. Example Classes: Sniper, Bow Knight</p>'},
-    {   title: 'Tome User',
+    {   title: 'Tome Class',
         image: '<img class = "result-pic" id = "img" src="/static/css/images/FireSlides/tome.png"/>',
         desc: '<p class="info">You are a tome user. Tome users excel at using magic from both close and long range. They deal great damage against foes with low resistance, however, they are one of the most frailest classes in the game due to their low defenses. Example Classes: Mage, Sorcerer</p>'}
 ];

@@ -27,7 +27,7 @@ $(document).ready(function(){
 				$('.not-logged-in').hide();
 				$('.logged-in').show();
 				$('.test-button').show();
-				$('.sign-up-button').hide();
+				$('.sign-up-note').hide();
 				console.log('logged in!');
 				}else {
 				$('.not-logged-in').show();
@@ -47,7 +47,7 @@ $(document).ready(function(){
 			$('.not-logged-in').hide();
 			$('.logged-in').show();
 			$('.test-button').show();
-			$('.sign-up-button').hide();
+			$('.sign-up-note').hide();
 				console.log(response);
 				window.location.href=('/home');
 		});
