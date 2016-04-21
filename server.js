@@ -26,7 +26,7 @@ app.use(session({
 	saveUninitialized:true,
 	resave: false,
 	secret:'secretpass',
-	cookie: { maxAge: 180000 } // 3 minutes
+	cookie: { maxAge: 600000 } // 10 minutes per session
 }));
 
 //mongod connect to another terminal
