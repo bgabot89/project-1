@@ -43,7 +43,7 @@ var qualities = [
 //route to index file
 app.get('/', function (req,res){
 	var email = req.session.email;
-	res.render('index',{email: email});
+	res.render('home',{email: email});
 });
 
 //route to get all data from the array list and sends it to the json
