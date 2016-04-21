@@ -1,5 +1,15 @@
+@font-face{
+		font-family: 'Herculanum';
+		src: url('/static/css/fonts/slayer11_2.TTF');
+}
+
+@font-face {
+		font-family: Ringbearer;
+		src: url('/static/css/fonts/RINGM___.TTF');
+}
+
 h6 {
-		font-size:75px;
+		font-size:50px;
 		font-family: Herculanum;
 		padding: 100px 0px 50px 0px;
 		color: white;
@@ -14,12 +24,12 @@ h6 {
 #game-header {
 	font-family: Herculanum;
 	color: white;
-	font-size:75px;
-	padding-bottom: 50px;
+	font-size:50px;
+	padding: 10px 0px 50px 0px;
 }
 
 .bg-header {
-		font-size:75px;
+		font-size:50px;
 		font-family: Herculanum;
 		color: white;
 		text-align: center;
@@ -112,7 +122,7 @@ h5 {
 
 a {
 	color: white;
-	font-size: 20px;
+	font-size: 14px;
 	margin: 0px 10px 0px 10px;
 }
 
