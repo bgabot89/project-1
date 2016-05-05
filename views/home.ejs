@@ -1,5 +1,4 @@
 <html>​
-<body>
 <head>​
 <!-- Bootstrap CSS from CDN works okay-->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -7,10 +6,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!--Makes text draggable -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="/static/parallax.js-1.4.2/parallax.js"></script>
+<script src="/static/parallax.js-1.4.2/parallax.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="/static/js/scripts.js"></script>
 
+
 </head>
+<body>
 <title>Persona Gamer</title>
 <!-- Adds a navigation bar -->
 <div>
@@ -39,30 +42,20 @@
   </nav><!-- /.navbar -->
 </div><!-- /.container-fluid -->
 
-<div id="header-bg">
+<div class="parallax-window" id="header-bg" data-parallax="scroll" data-image-src="/static/css/images/rpg_wall.jpg">
 </div>
 
 <div class= "text-center">
 <h5 class= "text-center"> Persona Gamer </h5>
 </div>
 
+<div id="about-section">
 <h6 class="text-center"> <span class="header-line"> About </span> </h6>
- <!-- <div class ="col-lg-4">
- <a href = '/rpg'><img class = "banner1" src ="http://i882.photobucket.com/albums/ac23/bgabot89/personabutt_zpsrf8ib9hf.png"> </img> </a>
- <h1> RPG Persona </h1>
- <p2> First off, let's determine what class you are. Take this test to determine what type of rpg class best fits you.<strong> Note: **This test can only be taken once per user** </strong></p2>
-
+ <!-- <div id = "about" class= "text-center container"> -->
+   <p class="text-center container"> Persona Gamer is an application containing various personality tests for rpg gamers. Choose from various popular rpg games such as League of Legends, Dungeons & Dragons, Fire Emblem and more!  </p>
  </div>
 
- <div class ="col-lg-4">
- <a href = '/qualities'><img class = "banner1" src ="http://i882.photobucket.com/albums/ac23/bgabot89/avatar_zpswotcrmcb.png"> </img> </a>
- <h1> Request an Avatar </h1>
- <p2> Next, let's give your hero some qualities! *Work in Progress*</p2> -->
- <div id = "about" class= "text-center container">
-   <p> Persona Gamer is an application containing various personality tests for rpg gamers. Choose from various popular rpg games such as League of Legends, Dungeons & Dragons, Fire Emblem and more!  </p>
- </div>
-
-<div id = "getting-started" class= "text-center row">
+<div id = "getting-started" class= "parallax-window text-center row" data-parallax="scroll" data-image-src="/static/css/images/city_wallpaper.jpg">
    <h6 id= "get-start" class="text-center"><span class="header-line">  How It Works </span> </h6>
    <div class="col-lg-4 instruct">
      <img style = "width:200px; border-radius: 3px;" src="/static/css/images/instructions.png">
@@ -73,13 +66,22 @@
    <div class="col-lg-4 instruct">
      <img style = "width:200px; border-radius: 3px;" src="/static/css/images/bars.png">
    </div>
+   <a href="/signup" style="width:200px;" id= "signup-button" class="btn btn-primary" role="button">Signup Now</a>
  </div>
 
  <div id= "take-a-test" class="text-center">
    <h6> <span class="header-line"> Take a Test </span> </h6>
+
    <p> Start browsing our selection and select a game that you'd like to take a test on  </p>
-   <a href="/tests" style="width:200px;" id= "browse-button" class="btn btn-primary" role="button">Browse Tests</a>
+   <a href="/tests" style="width:200px;" id= "browse-button" class="btn btn-primary" role="button">Browse All Tests</a>
+   <!-- <div class="single-item">
+     <div><img src="/static/css/images/icons/fire_emblem.png">Fire Emblem</div>
+     <div><img src="/static/css/images/icons/dark_souls.png">Dark Souls</div>
+     <div><img src="/static/css/images/icons/pokemon.png"></div>
+   </div> -->
  </div>
+
+
  <div id="copyright" class="text-center">
    <p id="copy-pp"> ©2016 Brian Gabot, All rights Reserved </p>
  </div>

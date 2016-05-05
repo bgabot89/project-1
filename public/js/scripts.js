@@ -1,6 +1,5 @@
 //event listeners for signup and login buttons
 $(document).ready(function(){
-
 	//Event Listener for Hero Entry
 	$("#entry-form").on("submit", function(e){
 		e.preventDefault();
