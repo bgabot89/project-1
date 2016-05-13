@@ -473,19 +473,6 @@ h1,h2,h3,h4 {
 	#copy-pp{
 		padding-top: 40px;
 	}
-
-	.sign-in {
-		background-color: white;
-	}
-
-	#login-text {
-		color: black;
-	}
-
-	hr {
-	border-width: 3px;
-	}
-
 	.login-btn {
 		width: 200px;
 		font-size: 20px;
@@ -493,5 +480,39 @@ h1,h2,h3,h4 {
 
 	.field {
 		font-size: 17px;
-		color:black;
+		color:white;
+	}
+
+	#sign-up, #login {
+		margin-top: 100px;
+	}
+
+	#signup-page {
+		background:  linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+		),
+		url('/static/css/images/wallpapers/sign-up.jpeg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#login-page{
+		background:  linear-gradient(
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5)
+		),
+		url('/static/css/images/wallpapers/login.jpeg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#login-text {
+		color: white;
+	}
+
+	hr {
+	border-width: 1px;
 	}
