@@ -60,33 +60,15 @@ h5 {
 	font-family: Ringbearer;
 	font-size: 60px;
 	color: white;
+	text-align: center;
+	top: 100;
 	z-index: 1;
-	right: 500;
-	bottom: 400;
+	left: 0;
+ 	right:0;
+	top: 300;
 	position: absolute;
 	text-shadow: 2px 2px black;
 }
-
-@media screen and (max-width: 900px) {
-	h5 {
-		right:150;
-	}
-}
-
-@media screen and (max-width: 500px){
-	h5 {
-		right:10;
-	}
-}
-
-
-
-@media screen and (max-width: 1350px) and (min-width: 900px){
-	h5 {
-		right:400;
-	}
-}
-
 
 .game-logo{
 		position: absolute;
@@ -145,7 +127,6 @@ a {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-
 }
 
 body {
@@ -165,6 +146,7 @@ ol {
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+
 p1 {
   font-size:30px;
   font-family:Herculanum;
@@ -174,7 +156,6 @@ p1 {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-
 }
 
 p2 {
@@ -186,7 +167,6 @@ p2 {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-
 }
 
 h1,h2,h3,h4 {
@@ -202,16 +182,6 @@ h1,h2,h3,h4 {
 		padding:10px;
 		margin: 0 auto;
 	}
-.jumbotron {
-	background: #000 url("http://i882.photobucket.com/albums/ac23/bgabot89/map1_zpsfsy2z7mt.png") center center;
-	font-family:Herculanum;
-	position: relative;
-    color:white;
-    background-size: cover;
-    overflow: hidden;
-    opacity:55%;
-
-  }
 
   .banner1 {
   	height:200px;
@@ -237,10 +207,6 @@ h1,h2,h3,h4 {
   	background-color: green;
   }
 
- /* li.logged-in{
-    display:none;
-  }*/
-
   .description{
     color:white;
   }
@@ -255,15 +221,9 @@ h1,h2,h3,h4 {
 	  color:white;
 		font-family: 'Roboto', sans-serif;
 		font-weight: 100px;
-		/*font-family: Arial;*/
 		padding-top: 10px;
-	    /*text-shadow:
-	    -1px -1px 0 #000,
-	    1px -1px 0 #000,
-	    -1px 1px 0 #000,
-	    1px 1px 0 #000;*/
-
   }
+
   .wrapper {
     text-align:center;
   }
@@ -273,10 +233,6 @@ h1,h2,h3,h4 {
 		margin-top: -120px;
 		z-index:1;
 		position: relative;
-		/*background: linear-gradient(
-			rgba(0,0,0,0.25),
-			rgba(0,0,0,0.25)
-		),*/
 		background: linear-gradient(135deg, rgba(0,0,0,0.4),
 		rgba(0,0,0,0.25));
 		background-position: center;
@@ -323,7 +279,6 @@ h1,h2,h3,h4 {
 
 
 	/*fire page */
-
 	#fire-bg {
 		margin-top: -120px;
 		z-index:1;
