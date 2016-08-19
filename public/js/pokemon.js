@@ -38,19 +38,6 @@ quizSteps.each(function () {
                 //parses a string argument and returns integer of the specified radix, i.e.. 1,2,3...
                 answerScore = parseInt(value);
                 console.log(answerScore);
-            // check to see if an answer was previously selected
-            // if (currentStep.children('.active').length > 0) {
-            //     var wasActive = currentStep.children('.active'),
-            //         oldScoreValue = wasActive.attr('data-quizIndex'),
-            //         oldScore = parseInt(oldScoreValue);
-            //     // handle visual active state
-            //     currentStep.children('.active').removeClass('active');
-            //     $this.addClass('active');
-            //     // handle the score calculation
-            //     totalScore -= oldScoreValue;
-            //     totalScore += answerScore;
-            //     calcResults(totalScore);
-            // } else {
                 // handle visual active state
                 $this.addClass('active');
                 // handle score calculation
@@ -58,21 +45,9 @@ quizSteps.each(function () {
                 calcResults(totalScore);
                 //show and hide current step
                 nextStep(currentStep);
-                // handle current step
-                // updateStep(currentStep);
-                // console.log(currentStep);
-            // }
         }
     });
 });
-
-// show current step/hide other steps
-// function updateStep(currentStep) {
-//     if(currentStep.hasClass('current')){
-//        currentStep.removeClass('current');
-//        currentStep.next().addClass('current');
-//     }
-// }
 
 
 // fixed-shows current step/hide other steps

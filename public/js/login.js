@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 //function checkAuthorization on reload
 	function checkAuth() {
 		$.get('/current-user', function (data){

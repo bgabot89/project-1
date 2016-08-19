@@ -1,80 +1,11 @@
-/*.g {
-  		padding: 0.25em;
-			overflow: hidden;
-		}
-		.g li {
-			float: left;
-			width: 50%;
-			padding: 0.25em;
-		}
-		.g img {
-			display: block;
-		}
-		.g li:nth-child(odd) {
-			clear: left;
-		}
-
-		@media screen and (min-width: 40em) {
-			.g li {
-		    	width: 33.3333333333333333%;
-		  	}
-		  	.g li:nth-child(3n+1) {
-		  		clear: left;
-		  	}
-		  	.g li:nth-child(odd) {
-				clear: none;
-			}
-		}
-		@media screen and (min-width: 55em) {
-			.g li {
-		    	width: 25%;
-		  	}
-		  	.g li:nth-child(4n+1) {
-		  		clear: left;
-		  	}
-		  	.g li:nth-child(3n+1) {
-				clear: none;
-			}
-		}
-		@media screen and (min-width: 72em) {
-			.g li {
-		    	width: 20%;
-		  	}
-		  	.g li:nth-child(5n+1) {
-		  		clear: left;
-		  	}
-		  	.g li:nth-child(4n+1) {
-				clear: none;
-			}
-		}
-		@media screen and (min-width: 90em) {
-			.g li {
-		    	width: 16.666666666%;
-		  	}
-		  	.g li:nth-child(6n+1) {
-		  		clear: left;
-		  	}
-		  	.g li:nth-child(5n+1) {
-				clear: none;
-			}
-		}*/
-
 
 /* fix different image elements having different sizes */
-    #grid {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 0;
-      margin-left: 200px;
-    }
-
-    /*a {
-      font-size: 16px;
-      display: inline-block;
-      margin-bottom: 8px;
-      width: calc(50% - 4px);
-      margin-right: 8px;
-    }*/
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0;
+  margin-left: 200px;
+}
 
 a:link {
   text-decoration: none;
@@ -97,23 +28,23 @@ figcaption {
   padding-top: 40px;
   margin-bottom: 20px;
 }
-  .image-icon {
-    border: none;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    background: #ccc;
-    transition: transform .2s ease-in-out;
-  }
 
-    a:nth-of-type(2n) {
-      margin-right: 8px;
-    }
+.image-icon {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+}
 
-    figure {
-      margin: 0;
-    }
+a:nth-of-type(2n) {
+  margin-right: 8px;
+}
 
+figure {
+  margin: 0;
+}
 
 /* optimize for large-sized screens */
 @media screen and (max-width: 1200px) {
@@ -121,15 +52,3 @@ figcaption {
     width: calc(75%);
   }
 }
-
-/* optimize for medium-sized screen */
-/*@media screen and (min-width: 100px) {
-  img {
-    width: calc (30%);
-  }
-}*/
- /*optimize for smaller screens */
-    /*@media screen and (min-width: 50em) {
-      a {
-        width: calc(25%);
-      }*/
