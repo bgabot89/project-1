@@ -51,6 +51,9 @@ app.get("/api/qualities", function (req,res){
 	//sends data as json
 	res.json(qualities);
 });
+// SUGGESTION BY ANGELO PER COLLABORATION PRACTICE
+//might want to consider adding something like the line below to line 52 on the server.js file:
+//Qualities.find({}, function(err,Qualities){
 
 //api route to create a new entry to the api list
 app.post("/api/qualities", function (req,res){
